@@ -1,0 +1,25 @@
+{
+  "0": {
+    "status": "Out",
+    "notes": "Big Box",
+    "createDate": 1625007987616,
+    "updateDate": 1625008322463
+  },
+  "1": {
+    "status": "Out",
+    "notes": "",
+    "createDate": 1625008000160,
+    "updateDate": 1625008381364
+  },
+  "2": {
+    "status": "Out",
+    "notes": "",
+    "createDate": 1625008006217
+  },
+  "3": {
+    "status": "Out",
+    "notes": "",
+    "createDate": 1625008329471,
+    "updateDate": 1625008348416
+  }
+}

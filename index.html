@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Inventory System</title>
+    <style>
+        :root {
+            --color-bg: #131516;
+            --color-txt: #fff;
+            --color-ogj: #1a2a64;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-txt);
+        }
+
+        .content {
+            display: flex;
+        }
+        .box {
+            flex: 1;
+            margin: 0 auto;
+            margin-left: 50px;
+        }
+        button {
+            background: var(--color-ogj);
+            border: 1px solid var(--color-txt);
+            color: var(--color-txt);
+            font-size: 24px;
+            padding: 5px, 10px;
+            margin: 5px;
+        }
+        #log {
+            overflow-y: scroll;
+            height: 100%;
+        }
+        .info {
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        const fs = require("fs");
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div id="container box">
+            <h1>QR Code Scanner</h1>
+            <div class="video-box">
+                <p>Scan a QR code from your camera</p>
+                <video id="VideoPreview"></video><br />
+                <button id="StartBtn" onclick="startScan()">Start Scanning LIVE</button>
+            </div>
+            <div>
+                <button onclick="markOut()">Mark As OUT</button>
+                <button onclick="markIn()">Mark As IN</button>
+            </div>
+            <div class="info">
+                <p>Scanned Code: <span id="idDisplay"></span></p>
+                <p>In System: <span id="InDataDisplay"></span></p>
+                <p>Notes: <span id="notes"></span></p>
+            </div>
+            <p id="rawDisplay"></p>
+            <div id="box-add" style="display: none;">
+                <h3>ADD New Box</h3>
+                <button onclick="newCodeAdd()">Yes</button>
+                <button onclick="hide('box-add')">No</button>
+                <input type="text" placeholder="Status" id="newCodeStatus">
+                <input type="text" placeholder="Notes" id="newCodeNotes"> 
+            </div>
+        </div>
+        <div class="box">
+            <pre id="log"></pre>
+        </div>
+    </div>
+    <select id="videoSource"></select>
+    <script src="js/instascan_min.js"></script>
+    <script src="js/qcode-decoder.min.js"></script>
+    <script src="js/core.js"></script>
+</body>
+</html>

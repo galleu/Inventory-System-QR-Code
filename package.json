@@ -1,0 +1,23 @@
+{
+  "name": "inventory-system-qr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "galleu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galleu/Inventory-System-QR-Code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/galleu/Inventory-System-QR-Code/issues"
+  },
+  "homepage": "https://github.com/galleu/Inventory-System-QR-Code#readme",
+  "description": ""
+}
